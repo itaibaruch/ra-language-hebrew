@@ -10,7 +10,6 @@ export default {
             clone: 'שכפל',
             confirm: 'אשר',
             create: 'צור',
-            edit: 'ערוך',
             delete: 'מחק',
             edit: 'ערוך',
             export: 'ייצא',
@@ -23,10 +22,16 @@ export default {
             show: 'הצג',
             sort: 'מיין',
             undo: 'בטל',
+            unselect: 'בטל בחירה',
+            expand: 'הרחב',
+            close: 'סגור',
+            open_menu: 'פתח תפריט',
+            close_menu: 'סגור תפריט',
         },
         boolean: {
             true: 'כן',
             false: 'לא',
+            null: '',
         },
         page: {
             create: 'צור %{name}',
@@ -37,50 +42,48 @@ export default {
             loading: 'טוען',
             not_found: 'לא קיים',
             show: '%{name} #%{id}',
+            empty: 'אין %{name} עדייו.',
+            invite: 'האם ברצונל להוסיף אחד?',
         },
         input: {
             file: {
-                upload_several:
-                'גרור מספר קבצים להעלאה או לחץ לבחור אחד.',
+                upload_several: 'גרור מספר קבצים להעלאה או לחץ לבחור אחד.',
                 upload_single: 'גרור קובץ להעלאה או לחץ לבחור אחד.',
             },
             image: {
-                upload_several:
-                'גרור מספר תמונות להעלאה או לחץ לבחור אחת.',
-                upload_single:
-                'גרור תמונה להעלאה או לחץ לבחור אחת.',
+                upload_several: 'גרור מספר תמונות להעלאה או לחץ לבחור אחת.',
+                upload_single: 'גרור תמונה להעלאה או לחץ לבחור אחת.',
             },
             references: {
                 all_missing: 'ישויות הקשר לא נמצאו.',
-                many_missing:
-                'לפחות אחת מישויות הקשר אינה זמינה יותר.',
-                single_missing:
-                'ישות הקשר אינה זמינה יותר.',
+                many_missing: 'לפחות אחת מישויות הקשר אינה זמינה יותר.',
+                single_missing: 'ישות הקשר אינה זמינה יותר.',
+            },
+            password: {
+                toggle_visible: 'הסתר סיסמה',
+                toggle_hidden: 'הצג סיסמה',
             },
         },
         message: {
             about: 'אודות',
             are_you_sure: 'האם את/ה בטוח/ה ?',
             bulk_delete_content:
-            'האם אתה בטוח שברצונך למחוק %{name}? |||| האם אתה בטוח שברצונך למחוק %{smart_count} פריטים?',
-            bulk_delete_title:
-            'מחק %{name} |||| מחק %{smart_count} %{name} פריטים',
+                'האם אתה בטוח שברצונך למחוק %{name}? |||| האם אתה בטוח שברצונך למחוק %{smart_count} פריטים?',
+            bulk_delete_title: 'מחק %{name} |||| מחק %{smart_count} %{name} פריטים',
             delete_content: 'האם אתה בטוח שברצונך למחוק את הפריט הזה?',
             delete_title: 'מחק %{name} #%{id}',
             details: 'פרטים',
-            error:
-            'קרתה שגיאת תקשורת והבקשה שלך לא הסתיימה.',
+            error: 'קרתה שגיאת תקשורת והבקשה שלך לא הסתיימה.',
             invalid_form: 'הטופס אינו תקין. אנא תקן את שגיאותיך',
             loading: 'העמוד טוען, אנא המתן',
             no: 'לא',
+            not_found: 'הכנסת כתובת שגויה או לחצת על קישור לא תקין',
             yes: 'כן',
-            not_found:
-            'הכנסת כתובת שגויה או לחצת על קישור לא תקין',
+            unsaved_changes: 'חלק מהשינויים לא נשמרו, האם אתה בטוח שאתה שאתה רוצה להתעלם מהם?',
         },
         navigation: {
             no_results: 'לא נמצאו תוצאות',
-            no_more_results:
-'עמוד %{page} מחוץ לתחום. אנא נסה את העמוד הקודם.',
+            no_more_results: 'עמוד %{page} מחוץ לתחום. אנא נסה את העמוד הקודם.',
             page_out_of_boundaries: 'עמוד %{page} מחוץ לתחום',
             page_out_from_end: 'לא ניתן להמשיך מעבר לעמוד האחרון',
             page_out_from_begin: 'לא ניתן לגשת לפני העמוד הראשון',
@@ -89,7 +92,13 @@ export default {
             next: 'הבא',
             prev: 'הקודם',
         },
+        sort: {
+            sort_by: 'סדר לפי %{field} %{order}',
+            ASC: 'סדר עולה',
+            DESC: 'סדר יורד',
+        },
         auth: {
+            auth_check_error: 'אנא התחבר בכדי להמשיך',
             user_menu: 'פרופיל',
             username: 'שם משתמש',
             password: 'סיסמא',
@@ -98,14 +107,14 @@ export default {
             logout: 'התנתקות',
         },
         notification: {
-            updated: 'פריט עודכן בהצלחה',
+            updated: 'פריט עודכן בהצלחה |||| %{smart_count} עודכנו בהצלחה',
             created: 'פריט נוצר בהצלחה',
-            deleted: 'פריט נמחק בהצלחה',
+            deleted: 'פריט נמחק בהצלחה |||| %{smart_count} נמחקו בהצלחה',
             bad_item: 'פריט לא תקין',
             item_doesnt_exist: 'פריט לא קיים',
             http_error: 'שגיאה בהתקשרות מול השרת',
-            data_provider_error:
-            'שגיאת dataProvider. בדוק את הקונסול לפרטים נוספים.',
+            data_provider_error: 'שגיאת dataProvider. בדוק את הקונסול לפרטים נוספים.',
+            i18n_error: 'לא ניתן לטעון תרגומים עבור השפה שנבחרה',
             canceled: 'הפעולה בוטלה',
             logged_out: 'הנך מנותק, אנא התחבר מחדש.',
         },
