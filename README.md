@@ -4,6 +4,9 @@ Hebrew translations for [React-Admin](https://github.com/marmelab/react-admin), 
 
 [![react-admin-demo](https://marmelab.com/react-admin/img/react-admin-demo-still.png)](https://vimeo.com/268958716)
 
+## TODO
+update to latest version https://github.com/marmelab/react-admin/blob/master/packages/ra-language-english/src/index.ts
+
 ## Installation
 
 ```sh
