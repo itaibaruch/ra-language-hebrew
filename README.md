@@ -5,31 +5,33 @@ Hebrew translations for [React-Admin](https://github.com/marmelab/react-admin), 
 [![react-admin-demo](https://marmelab.com/react-admin/img/react-admin-demo-still.png)](https://vimeo.com/268958716)
 
 ## TODO
+
 update to latest version https://github.com/marmelab/react-admin/blob/master/packages/ra-language-english/src/index.ts
 
 ## Installation
 
 ```sh
-npm install --save ra-language-hebrew
+npm install --save ra-language-hebrew-il
 ```
 
 ## Usage
 
 ```js
-import HebrewMessages from 'ra-language-hebrew';
+import HebrewMessages from 'ra-language-hebrew-il';
 
 const messages = {
-    'he': HebrewMessages,
+  he: HebrewMessages,
 };
 
-const i18nProvider = locale => messages[locale];
+const i18nProvider = (locale) => messages[locale];
 
-<Admin locale="he" i18nProvider={i18nProvider}>
+<Admin locale='he' i18nProvider={i18nProvider}>
   ...
-</Admin>
+</Admin>;
 ```
 
 ## RTL
+
 Material UI is already supprting RTL, so we can add its support to react admin using these 2 steps:
 
 1. Change **dir** property to **rtl** in your root elements (like body). You can also connect this property to redux.
@@ -42,21 +44,15 @@ const theme = createMuiTheme({
   direction: 'rtl',
 });
 
-const App = () => (
-    <Admin theme={theme}>
-        // ...
-    </Admin>
-);
+const App = () => <Admin theme={theme}>// ...</Admin>;
 ```
 
-*public/index.html*
+_public/index.html_
 
 ```html
 <body>
-<noscript>
-  You need to enable JavaScript to run this app.
-</noscript>
-<div id="root" dir="rtl"></div>
+  <noscript> You need to enable JavaScript to run this app. </noscript>
+  <div id="root" dir="rtl"></div>
 </body>
 ```
 
