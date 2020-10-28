@@ -31,7 +31,7 @@ var hebrewMessages = {
         boolean: {
             true: 'כן',
             false: 'לא',
-            null: '',
+            null: ' ',
         },
         page: {
             create: 'צור %{name}',

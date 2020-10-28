@@ -33,7 +33,7 @@ const hebrewMessages: TranslationMessages ={
         boolean: {
             true: 'כן',
             false: 'לא',
-            null: '',
+            null: ' ',
         },
         page: {
             create: 'צור %{name}',
